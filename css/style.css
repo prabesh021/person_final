@@ -1,0 +1,15 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.flex-item{
+    background: red;
+    color: white;
+   
+    
+}
+.flex-item:hover{
+    background: green;
+    color: black;
+    
+}
