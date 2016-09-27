@@ -20,7 +20,7 @@ app.use(connection(mysql,{
     host        : 'localhost',
     user        : 'ui',
     password    : 'ui1234',
-    database    : 'person_table'
+    database    : 'persontable'
     },'request'));
 
 //Routing
