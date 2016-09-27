@@ -1,7 +1,7 @@
-angular.module("appform").directive("forms", function(){
+angular.module("appform").directive("formsHello", function(){
    return{
        restrict: "EAC",
-       templateUrl: "/views/forms.html"
+       templateUrl: "/views/report.html"
    }; 
    
 });
