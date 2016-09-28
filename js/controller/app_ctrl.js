@@ -40,6 +40,16 @@ angular.module("appform").controller("app_ctrl", ["$scope", "person_serv", funct
         
         
     });
+     $scope.call =function(id){
+         person_serv.id=id;
+        console.log(id);
+        person_serv.getPersonListIds();
+ 
+    }
+    
+    $scope.update=function(flag){
+        $scope.flag=flag;
+    }
                  
                  
     

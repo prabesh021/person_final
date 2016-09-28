@@ -20,23 +20,23 @@ app.use(connection(mysql,{
     host        : 'localhost',
     user        : 'ui',
     password    : 'ui1234',
-    database    : 'persontable'
+    database    : 'shopping_cart'
     },'request'));
 
 //Routing
 //this is routing but to connect the rest API with our database
 
-var url = "/service/person";
+//var url = "/service/person";
 
 
-app.get(url,function(req, res, next){
+app.get("/service/person",function(req, res, next){
    //arrays to store dynamic parameters
-    
+   // var ids =[];
     
     var query = "SELECT * FROM person";
     req.getConnection(function(err, connection){
        if(err) return next(err);
-        
+      
         connection.query(query, function(err, results){
            if(err){
                console.log(err);
