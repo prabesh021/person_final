@@ -53,17 +53,17 @@ app.get(url,function(req, res, next){
     
 });
 
-app.get( "/service/person/:id",function(req, res, next){
+app.get( "/service/person/:personid",function(req, res, next){
    //arrays to store dynamic parameters
-    var person_id =[];
-    var id=req.params.id;
-    person_id.push(person_id);
+    var person_personid =[];
+    var personid=req.params.personid;
+    person_personid.push(person_personid);
     
-    var query = "SELECT * FROM person WHERE id = ?";
+    var query = "SELECT * FROM person WHERE personid = ?";
     req.getConnection(function(err, connection){
        if(err) return next(err);
         
-        connection.query(query, id, function(err, results){
+        connection.query(query, personid, function(err, results){
            if(err){
                console.log(err);
                return next("Mysql error, check your query");
